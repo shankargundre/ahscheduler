@@ -48,7 +48,7 @@ const formatTimestamp = (timestamp) => {
   useEffect(() => {
     console.log('Fetching jobs using URL:', `${apiUrl}/jobschedular/schJobList`);
     fetchJobData();
-  },[apiUrl]);
+  },[]);
 
 
 

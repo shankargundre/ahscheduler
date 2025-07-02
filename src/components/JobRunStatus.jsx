@@ -41,7 +41,7 @@ const JobRunStatus = () => {
   useEffect(() => {
     console.log('Fetching jobs using URL:', `${apiUrl}/jobschedular/jobRunStatus`);
     fetchJobRunStatus();
-  });
+  },[]);
 
   const filteredJobRunStatus = jobRunStatusData.filter((item) => {
     const jobNameMatch = item.jobName.toLowerCase().includes(jobNameFilter.toLowerCase());

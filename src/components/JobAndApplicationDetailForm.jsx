@@ -29,9 +29,6 @@ const groupName = "grc";
     return dateTime.length === 16 ? `${dateTime}:00` : dateTime;
   };
 
-
-
-
   const token = btoa(`${user}:${pass}`);
   useEffect(() => {
     axios
@@ -46,7 +43,7 @@ const groupName = "grc";
       .catch((error) => {
         console.error("Error fetching APIS:", error);
       });
-  }, [apiUrl, token]);
+  }, []);
 
   useEffect(() => {
     const fetchApplications = async () => {
@@ -61,7 +58,7 @@ const groupName = "grc";
       }
     };
     fetchApplications();
-  }, [apiUrl, instance]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

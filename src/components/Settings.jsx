@@ -1,5 +1,5 @@
 function Settings() {
-    return <h2>Settings</h2>;
+    return <h2>Log</h2>;
   }
   export default Settings;
   

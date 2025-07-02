@@ -21,8 +21,8 @@ const groupName = "grc";
   const [apiName, setApiName] = useState("");
   const apiUrl = window._env_.API_BASE_URL;
  // const appTenant = import.meta.env.API_TENANT || "DEVINST";
-  const user =  window._env_.SCHEDULER_API_USER || "grcuser";
-  const pass =  window._env_.SCHEDULER__API_PWD || "crave@123";
+  const user =  import.meta.env.VITE_SCHEDULAR_API_USER || "grcuser";
+  const pass =  import.meta.env.VITE_SCHEDULAR_API_PWD || "crave@123";
    const { instance } = useParams();
 
   const formatWithSeconds = (dateTime) => {

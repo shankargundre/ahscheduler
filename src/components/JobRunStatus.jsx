@@ -14,8 +14,8 @@ const JobRunStatus = () => {
   const [jobNameFilter, setJobNameFilter] = useState("");
   const [jobRunStatusFilter, setJobRunStatusFilter] = useState("");
   const apiUrl = window._env_.API_BASE_URL;
-  const user =  window._env_.SCHEDULER_API_USER || "grcuser";
-  const pass =  window._env_.SCHEDULER_API_PWD || "crave@123";
+  const user =  import.meta.env.VITE_SCHEDULAR_API_USER || "grcuser";
+  const pass =  import.meta.env.VITE_SCHEDULAR_API_PWD || "crave@123";
   
   const formatTimestamp = (timestamp) => {
     return timestamp?.split(".")[0] || "";

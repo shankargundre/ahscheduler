@@ -23,8 +23,8 @@ const paginatedData = filteredScheduledJobs.slice(
   (currentPage - 1) * itemsPerPage,
   currentPage * itemsPerPage
 );
-  const user = window._env_.SCHEDULER_API_USER || "grcuser";
-  const pass = window._env_.SCHEDULER_API_PWD || "crave@123";
+  const user =  import.meta.env.VITE_SCHEDULAR_API_USER || "grcuser";
+  const pass =  import.meta.env.VITE_SCHEDULAR_API_PWD || "crave@123";
 
 const formatTimestamp = (timestamp) => {
   return timestamp?.split('.')[0] || '';

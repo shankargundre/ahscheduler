@@ -6,7 +6,7 @@ import ProtectedLayout from './components/ProtectedLayout';
 import JobAndApplicationDetailForm from './components/JobAndApplicationDetailForm';
 import ScheduledJobsTable from './components/ScheduledJobsTable';
 import JobRunStatus from './components/JobRunStatus';
-import Settings from './components/Settings';
+import LogDownloader from './components/LogDownloader';
 
 import './App.css';
 
@@ -76,7 +76,7 @@ function App() {
           />
           <Route path="jobdetail" element={<ScheduledJobsTable jobs={jobs} />} />
           <Route path="jobrun" element={<JobRunStatus statuses={statuses} />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="logs" element={<LogDownloader />} />
         </Route>
 
         {/*

@@ -27,7 +27,7 @@ const ProtectedLayout = ({ isLoggedIn, username, onLogout }) => {
               <Link to={`/ahscheduler/${instance}/jobrun`}>🔁 Job Runs</Link>
             </li>
             <li>
-              <Link to={`/ahscheduler/${instance}/settings`}>⚙️ Settings</Link>
+              <Link to={`/ahscheduler/${instance}/logs`}>🧾 Application Logs</Link>
             </li>
           </ul>
         </nav>

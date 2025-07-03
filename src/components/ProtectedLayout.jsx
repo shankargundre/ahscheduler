@@ -4,7 +4,7 @@ import Header from './Header';
 
 const ProtectedLayout = ({ isLoggedIn, username, onLogout }) => {
   const { instance } = useParams();
-
+const showLogUI = window._env_?.showLogUI?.trim() === 'true';
   // If not logged in, bounce back to the proper login URL
   if (!isLoggedIn) {
     return <Navigate to={`/ahscheduler/${instance}/login`} replace />;
@@ -26,9 +26,11 @@ const ProtectedLayout = ({ isLoggedIn, username, onLogout }) => {
             <li>
               <Link to={`/ahscheduler/${instance}/jobrun`}>🔁 Job Runs</Link>
             </li>
+             {showLogUI && (
             <li>
               <Link to={`/ahscheduler/${instance}/logs`}>🧾 Application Logs</Link>
             </li>
+              )}
           </ul>
         </nav>
         <div className="content">

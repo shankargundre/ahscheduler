@@ -5,7 +5,7 @@ import './App.css';
 import App from './App.jsx';
 
 // Fetch config from public/config.json before rendering the app
-fetch('/ahscheduler/config.json')
+fetch(`/ahscheduler/config.json?ts=${new Date().getTime()}`)
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load config.json');

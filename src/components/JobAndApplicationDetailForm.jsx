@@ -149,7 +149,7 @@ const groupName = "grc";
       }
     } catch (error) {
       console.error("❌ Submission error:", error);
-      alert("❌ Failed to submit job. See console for details.");
+      alert("❌ Failed to submit job. Job Name must be unique , for existing Scheduled Job Name check Job Detail.");
     }
   };
 
